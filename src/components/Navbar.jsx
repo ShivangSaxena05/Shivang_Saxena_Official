@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -43,15 +44,24 @@ const Navbar = () => {
     >
       {/* Logo & Navigation in a Single Div */}
       <div className="flex items-center justify-between w-full">
-        <div  className="w-60 h-50">
-        <img className="object-cover" src={logo} alt="Logo" />
+        <div className="w-60 h-50">
+          <img className="object-cover" src={logo} alt="Logo" />
         </div>
+        
         {/* Navigation Links */}
         <nav className="flex text-white items-center text-lg gap-8">
-          <a className="hover:text-pink-400 transition-opacity duration-300 opacity-80 hover:opacity-100" href="/">Home</a>
-          <a className="hover:text-pink-400 transition-opacity duration-300 opacity-80 hover:opacity-100" href="/skills">Skills</a>
-          <a className="hover:text-pink-400 transition-opacity duration-300 opacity-80 hover:opacity-100" href="/projects">Projects</a>
-          <a className="hover:text-pink-400 transition-opacity duration-300 opacity-80 hover:opacity-100" href="/contact">Contact</a>
+          <Link to="/" className="hover:text-pink-400 transition-opacity duration-300 opacity-80 hover:opacity-100">
+            Home
+          </Link>
+          <Link to="/skills" className="hover:text-pink-400 transition-opacity duration-300 opacity-80 hover:opacity-100">
+            Skills
+          </Link>
+          <Link to="/projects" className="hover:text-pink-400 transition-opacity duration-300 opacity-80 hover:opacity-100">
+            Projects
+          </Link>
+          <Link to="/contact" className="hover:text-pink-400 transition-opacity duration-300 opacity-80 hover:opacity-100">
+            Contact
+          </Link>
         </nav>
       </div>
     </div>
