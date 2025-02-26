@@ -1,41 +1,22 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './components/Home';
-import Contact from './components/Contact';
-import Projects from './components/Projects';
-import Footer from './components/Footer';
-import Skills from './components/Skills';
-import backgroundImage from './assets/bg.jpeg'; // Import the background image
+import "./App.css";
+import Navbar from "./components/Navbar";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+import Skills from "./components/Skills";
+import backgroundImage from "./assets/bg.jpeg"; // Import the background image
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Home />,
-    },
-    {
-      path: '/contact',
-      element: <Contact />,
-    },
-    {
-      path: '/projects',
-      element: <Projects />,
-    },
-    {
-      path: '/skills',
-      element: <Skills />,
-    },
-  ]);
-
   return (
-    <>
+    <Router>
       {/* Apply background image to the entire app */}
       <div
-        className="min-h-screen bg-repeat bg-center" // Use bg-repeat to tile the image
-        style={{ 
+        className="min-h-screen bg-repeat bg-center flex flex-col justify-between"
+        style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'contain', // Fit the image within the screen
+          backgroundSize: "contain",
         }}
       >
         {/* Dark Overlay */}
@@ -45,12 +26,19 @@ function App() {
         <Navbar />
 
         {/* Main Content */}
-        <RouterProvider router={router} />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
+          </Routes>
+        </main>
 
         {/* Footer */}
         <Footer />
       </div>
-    </>
+    </Router>
   );
 }
 
