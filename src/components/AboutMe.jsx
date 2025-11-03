@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const AboutMe = () => {
   const aboutMePoints = [
-    { title: '3rd-year B.Tech CSE student', description: 'at GL Bajaj Group of Institutions.' },
+    { title: '4th-year B.Tech CSE student', description: 'at GL Bajaj Group of Institutions.' },
     { title: 'Web Development Expertise', description: 'Proficient in HTML, CSS, JavaScript, and MERN stack.' },
-    { title: 'Programming Skills', description: 'Experienced in Java, Python, and C.' },
+    { title: 'Programming Skills', description: 'Experienced in Java and Python' },
     { title: 'AI Enthusiast', description: "Passionate about exploring emerging technologies, including Meta's AI advancements." },
     { title: 'Skill Upgradation', description: 'Actively engage in activities like karate, working out, and drawing.' },
     { title: 'Adaptable', description: 'Easily adjust to new environments and build connections quickly.' },
@@ -38,3 +38,4 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
