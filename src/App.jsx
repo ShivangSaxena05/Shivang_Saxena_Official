@@ -28,10 +28,10 @@ function App() {
         {/* Main Content */}
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
+            <Route path="/*" element={<Home />} />
+            <Route path="/contact/*" element={<Contact />} />
+            <Route path="/projects/*" element={<Projects />} />
+            <Route path="/skills/*" element={<Skills />} />
           </Routes>
         </main>
 
