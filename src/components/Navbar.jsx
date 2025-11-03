@@ -44,9 +44,11 @@ const Navbar = () => {
     >
       {/* Logo & Navigation in a Single Div */}
       <div className="flex items-center justify-between w-full">
+        <Link to="/">
         <div className="w-60 h-50">
           <img className="object-cover" src={logo} alt="Logo" />
         </div>
+        </Link>
         
         {/* Navigation Links */}
         <nav className="flex text-white items-center text-lg gap-8">
@@ -69,3 +71,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
