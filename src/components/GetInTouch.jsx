@@ -6,7 +6,7 @@ const GetInTouch = () => {
       <h1 className="text-4xl md:text-6xl font-bold text-gray-100 mb-6">Get in Touch</h1>
       <p className="text-xl md:text-2xl text-gray-300 mb-12 text-center">So that we can talk more about...</p>
       <div className="text-center">
-        <a href="/contact/contact" className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+        <a href="/contact#/contact" className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
           Contact Me
         </a>
       </div>
@@ -16,3 +16,4 @@ const GetInTouch = () => {
 
 
 export default GetInTouch;
+
